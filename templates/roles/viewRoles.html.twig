@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+    <table>
+        <th>EMAIL</th>
+        <th>ROLES</th>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.email }}</td>
+                <td> {{ user.roles|join(', ',' i ') }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}
